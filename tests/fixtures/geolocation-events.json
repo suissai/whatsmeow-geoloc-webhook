@@ -1,0 +1,46 @@
+[
+  {
+    "event": "message.location",
+    "messageId": "wamid-fixture-static-001",
+    "chatJid": "5511999999999@s.whatsapp.net",
+    "senderJid": "5511888888888@s.whatsapp.net",
+    "timestamp": "2026-10-04T20:00:00.000Z",
+    "location": {
+      "latitude": -23.55052,
+      "longitude": -46.633308,
+      "accuracy": 8.5,
+      "name": "São Paulo",
+      "address": "São Paulo, SP"
+    }
+  },
+  {
+    "event": "message.location",
+    "messageId": "wamid-fixture-live-001",
+    "chatJid": "5511977777777@s.whatsapp.net",
+    "senderJid": "5511966666666@s.whatsapp.net",
+    "timestamp": "2026-10-04T20:01:00.000Z",
+    "location": {
+      "latitude": -23.561684,
+      "longitude": -46.655981,
+      "accuracy": 6.2
+    },
+    "liveLocation": {
+      "accuracyInMeters": 6.2,
+      "speedInMps": 1.4,
+      "degreesClockwiseFromMagneticNorth": 92,
+      "sequenceNumber": 7
+    }
+  },
+  {
+    "event": "message.location",
+    "messageId": "wamid-fixture-boundary-001",
+    "chatJid": "5511955555555@s.whatsapp.net",
+    "senderJid": "5511944444444@s.whatsapp.net",
+    "timestamp": "2026-10-04T20:02:00.000Z",
+    "location": {
+      "latitude": 90,
+      "longitude": 180,
+      "altitude": 12
+    }
+  }
+]
