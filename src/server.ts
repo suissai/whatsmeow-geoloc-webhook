@@ -67,13 +67,10 @@ export function createGeolocationServer(options: ServerOptions = {}): Geolocatio
         broadcast(parsed.data);
         sendJson(res, 202, { accepted: true, messageId: parsed.data.messageId });
       } catch (error) {
-        sendJson(res, 400, {
-          error: error instanceof Error && error.message === "PAYLOAD_TOO_LARGE"
-            ? "payload_too_large"
-            : "invalid_json"
-        });
         if (error instanceof Error && error.message === "PAYLOAD_TOO_LARGE") {
-          res.statusCode = 413;
+          sendJson(res, 413, { error: "payload_too_large" });
+        } else {
+          sendJson(res, 400, { error: "invalid_json" });
         }
       }
       return;
